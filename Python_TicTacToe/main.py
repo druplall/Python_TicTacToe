@@ -7,7 +7,7 @@
 print('Welcome to Deo Tic Tac Toe implementation !')
 firstPlayer = None
 secondPlayer = None
-grid = ['9','8','7','6','5','4','3','2','1']
+grid = ['1','2','3','4','5','6','7','8','9']
 
 def player_selection():
     print('\n')
@@ -32,11 +32,14 @@ def get_user_input(firstplayer,secondplayer):
 
 def loadgrid(p):
     global grid
-    for i in grid:
-        if i % 3 == 0:
-            print('|{}|{}|{}|'.format(grid.index('9'),grid.index('8'),grid.index('7'))
+    for i in range(len(grid)):
+        if i  == 3:
+            print(' {} | {} | {} '.format(grid[6],grid[7],grid[8]))
+        elif i == 6:
+            print(' {} | {} | {} '.format(grid[5],grid[4],grid[3]))
+        elif i == 8:
+            print(' {} | {} | {} '.format(grid[2],grid[1],grid[0]))
 
-                  
 player_selection()
 
 while (True):
